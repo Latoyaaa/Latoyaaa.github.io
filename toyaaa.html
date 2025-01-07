@@ -90,12 +90,6 @@
 		}, { passive: false })
 
 		//touching mobile device screen ends: BACKWARD
-	//for MOBILE DEVICE controls
-	let message = "TAP/CLICK"
-	let touchingNow = false
-	//END OF mobile device let statements
-
-		
 		window.addEventListener("touchend", function(event) {
 			touchingNow = false
 			if (message == "") {
