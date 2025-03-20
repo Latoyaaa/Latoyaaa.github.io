@@ -39,6 +39,7 @@
   <p>Hi! I'm Latoya, a girl from NYC. Say hello!</p>
   <input id="Name" type="email" placeholder="Your name">
   <input id="Email" type="email" placeholder="Your email">
+  <input id="Color" placeholder="Favorite color">
   <input id="submit" id="submit" type="submit">
   
   
@@ -69,6 +70,7 @@
 	const db = getDatabase(app);
 const Name = document.querySelector("#Name") 
 const Email = document.querySelector("#Email")
+const Color = document.querySelector("#Color")
 document.querySelector('#submit').addEventListener('click', Submit)
 	
 
@@ -78,10 +80,12 @@ function Submit() {
   set(ref(db, timestamp), {
 	  Name: Name.value,
       email: Email.value,
+	  color: Color.value,
   });
 
   Name.value = ""
   Email.value = ""
+  Color.value = ""
 }
 
 
